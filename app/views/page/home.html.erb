@@ -1,0 +1,23 @@
+
+<div id="results"></div>
+<div id="img"></div>
+
+ <div class="search-div">
+
+ <div>
+ <input type="text" name="restaurants" id="rest-input" placeholder="search for restaurant or cuisines"/>
+ </div>
+ <div class="loc-input-div">
+ <input type="text" list="current" name ="mylocation" id="pac-input" />
+ <datalist id="current">
+    <option value="current location"><img src="https://image.flaticon.com/icons/svg/34/34250.svg"></option>
+ </datalist>
+ </div>
+ <div>
+ <button id="search-btn"><a href='/restaurant'>search</a></button>
+ </div>
+ </div>
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMfRndh8oVyNMwvoOk1B3sMJwiYTHs6V0&libraries=places&callback=initAutocomplete"
+        async defer></script>
+

@@ -1,0 +1,30 @@
+#pac-input{
+    width: 500px;
+    height: 30px;
+    font-size: 14px;
+ }
+ #rest-input{
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+ 
+ }
+ 
+ .search-div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+ } 
+
+ #card-div{
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ .ui.card>.image>.rest-pics{
+     width:267px;
+     height:205px;
+ }
