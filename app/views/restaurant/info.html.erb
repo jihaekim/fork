@@ -1,7 +1,6 @@
 
 
 <%photos = @spot.photos%>
-
 <div class="img-cont">
 <div><img src= "<%=photos[0].fetch_url(8000)%>"></div>
 <div><img src= "<%=photos[1].fetch_url(8000)%>"></div>
@@ -12,7 +11,7 @@
 <h1><%=@spot.name%></h1>
 <div class="spot-rating"><%= @spot.rating %></div>
 </div>
-<%=@spot.vicinity%>
+<%=@spot.formatted_address%>
 <% n = @spot.price_level%>
 <%case n%>
 <%when 1%>
@@ -28,6 +27,8 @@
 </div>
 
 <div class="review-div">
+
+<div class="display-reviews">
 <%reviews = @spot.reviews%>
 <%reviews.each do |review|%>
 <div class="review-line">
@@ -39,4 +40,22 @@
 <hr>
 </div>
 <%end%>
+</div>
+<div class="detail-display">
+<div class="name-small"><h5><%=@spot.name%></h5></div>
+<div class="detailed-info"><div class="icon-div"><i class="fas fa-map-marker-alt"></i></div><div class="detail-text"><%=@spot.formatted_address%></div></div>
+<div class="detailed-info"><div class="icon-div"><i class="fas fa-phone"></i></div><div class="detail-text"><%=@spot.formatted_phone_number%></div></div>
+<div class="detailed-info"><div class="icon-div"><i class="fas fa-external-link-alt"></i></div><div class="detail-text"><a href = "<%=@spot.website%>">Visit Website</a></div></div>
+
+<div class="name-small hour"><h5>Hours</h5></div>
+<div class="hour-display">
+<%@hours = @spot.opening_hours%>
+<%@open = @hours["weekday_text"]%>
+<%@open.each do |day|%>
+<div><%=day%></div>
+<%end%>
+</div>
+
+</div>
+
 </div>

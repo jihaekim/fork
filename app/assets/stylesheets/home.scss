@@ -44,6 +44,12 @@ body{
     display: flex;
     justify-content: space-between;
  }
+ .display-reviews{
+    width: 60%;
+ }
+ .detail-display{
+    width: 30%;
+ }
  
  .rest-address{
     padding-top: 6px;
@@ -115,7 +121,7 @@ body{
     }
 }
 .info-cont{
-    width:75%;
+    width:70%;
     margin:0 auto;
     margin-top: 3%;
 }
@@ -142,9 +148,11 @@ body{
     margin-left: 3.5%;
 }
 .review-div{
-    width:75%;
-    margin:0 auto;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
     margin-top: 3%;
+    display: flex;
 }
 .profile-img{
     width: 50px;
@@ -198,5 +206,29 @@ body{
     div{
         text-align: center;
         padding-top: 8%;
+    }
+}
+.icon-div{
+    width: 16px;
+    text-align: center
+}
+.detailed-info{
+    display: flex;
+    margin-bottom: 10px;
+}
+.detail-text{
+    margin-left: 8px;
+}
+.name-small{
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.hour{
+    margin-top:15px;
+}
+.hour-display{
+    margin-left: 24px;
+    div{
+        margin-bottom: 5px;
     }
 }
