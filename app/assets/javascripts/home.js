@@ -28,7 +28,7 @@ function initAutocomplete() {
     console.log(latitude);
     console.log(longitude);
     }
-
+   
 
 
 $(document).ready(function(){
