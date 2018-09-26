@@ -1,6 +1,109 @@
-<div id="card-div">
-<div class="ui three column grid" id="display-rest">
+<div class="outer">
+<div class="explore-head">
+<h2>Explore Restaurants</h2>
+</div>
+
+<div class="card-display">
+<div class="ui four column grid">
+
+
+<%@spot.take(12).each do |each_spot|%>
+ 
+  <%unless each_spot.photos[0].nil?%>
+    <div class="column">
+    <div class="ui fluid card">
+    <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+    </span>
+    </div>
+
+    
+    <div class="image rest-img">
+    <%= link_to image_tag(each_spot.photos[0].fetch_url(8000),class: 'resize'),
+    :controller => "restaurant",
+    :action => "info",
+    :place => each_spot.place_id %>
+    </div>
+ 
+
+    <div class="content">
+    <div class="display-line">
+
+    <div class="rest-name">  
+    <%= link_to (each_spot.name),
+    :controller => "restaurant",
+    :action => "info",
+    :place => each_spot.place_id %>
+    </div>
+
+    <div class="rating"><span><%=each_spot.rating%></span></div>
+    </div>
+    <div class="rest-address"><%=each_spot.vicinity%></div>
+    </div>
+    </div>
+    </div>
+    <%end%>
+<%end%>
+
 
 </div>
 </div>
 
+
+<div class="explore-head middle">
+<h2>Get Your Caffeine Fix</h2>
+</div>
+
+<div class="card-display">
+<div class="ui four column grid">
+
+
+<%@cafes.take(4).each do |each_spot|%>
+ 
+  <%unless each_spot.photos[0].nil?%>
+    <div class="column">
+    <div class="ui fluid card">
+    <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+    </span>
+    </div>
+
+    
+    <div class="image rest-img">
+    <%= link_to image_tag(each_spot.photos[0].fetch_url(8000),class: 'resize'),
+    :controller => "restaurant",
+    :action => "info",
+    :place => each_spot.place_id %>
+    </div>
+ 
+
+    <div class="content">
+    <div class="display-line">
+
+    <div class="rest-name">  
+    <%= link_to (each_spot.name),
+    :controller => "restaurant",
+    :action => "info",
+    :place => each_spot.place_id %>
+    </div>
+
+    <div class="rating"><span><%=each_spot.rating%></span></div>
+    </div>
+    <div class="rest-address"><%=each_spot.vicinity%></div>
+    </div>
+    </div>
+    </div>
+    <%end%>
+<%end%>
+
+
+</div>
+</div>
+
+
+
+
+
+</div>

@@ -1,23 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ForkTest</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<div id="results"></div>
-<div id="img"></div>
+    <%= stylesheet_link_tag   "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" %>
+    <%= stylesheet_link_tag    'application',  'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+  </head>
 
- <div class="search-div">
+  <body id="main-wallpaper">
+<div class="main-search">
+<div class="main-logo"><img src = "http://i66.tinypic.com/25ywpqg.jpg"></div>
+<div class="search-div">
 
- <div>
- <input type="text" name="restaurants" id="rest-input" placeholder="search for restaurant or cuisines"/>
- </div>
- <div class="loc-input-div">
- <input type="text" list="current" name ="mylocation" id="pac-input" />
- <datalist id="current">
-    <option value="current location"><img src="https://image.flaticon.com/icons/svg/34/34250.svg"></option>
- </datalist>
- </div>
- <div>
- <button id="search-btn"><a href='/restaurant'>search</a></button>
- </div>
- </div>
+<div class="ui massive icon input">
+<input type="text" class="big-search" list="current" name ="mylocation" id="pac-input" />
+</div>
 
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMfRndh8oVyNMwvoOk1B3sMJwiYTHs6V0&libraries=places&callback=initAutocomplete"
-        async defer></script>
-
+<div>
+<button class="big ui button" id="search-btn">search</button>
+</div>
+</div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMfRndh8oVyNMwvoOk1B3sMJwiYTHs6V0&libraries=places&callback=initAutocomplete"
+async defer></script>
+  
+</body>
+</html>
