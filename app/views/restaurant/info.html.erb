@@ -1,0 +1,42 @@
+
+
+<%photos = @spot.photos%>
+
+<div class="img-cont">
+<div><img src= "<%=photos[0].fetch_url(8000)%>"></div>
+<div><img src= "<%=photos[1].fetch_url(8000)%>"></div>
+</div>
+
+<div class="info-cont">
+<div class="place-name">
+<h1><%=@spot.name%></h1>
+<div class="spot-rating"><%= @spot.rating %></div>
+</div>
+<%=@spot.vicinity%>
+<% n = @spot.price_level%>
+<%case n%>
+<%when 1%>
+<div class="price-lvl"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"></div>
+<%when 2%>
+    <div class="price-lvl"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"></div>
+<%when 3%>
+    <div class="price-lvl"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"></div>
+<%when 4%>
+    <div class="price-lvl"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"><img src="https://image.flaticon.com/icons/svg/633/633688.svg"></div>
+<%end%>
+
+</div>
+
+<div class="review-div">
+<%reviews = @spot.reviews%>
+<%reviews.each do |review|%>
+<div class="review-line">
+<div class="author-info">
+<div class="profile-img"><img src="<%=review.profile_photo_url%>"></div>
+<div class="author-name"><%=review.author_name%></div>
+</div>
+<div class="txt-content"><%=review.text%></div>
+<hr>
+</div>
+<%end%>
+</div>

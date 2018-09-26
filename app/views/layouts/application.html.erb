@@ -13,6 +13,36 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  
+  <div class="nav-bar">
+
+  <div class="logo-search">
+  <div class="logo">
+  <a href = "/"><img src = "http://i66.tinypic.com/25ywpqg.jpg"></a>
+  </div>
+
+  <div class="search-nav">
+  <div class="ui huge icon input">
+  <input id="pac-input" class="small-input" type="text" placeholder="Search location...">
+  </div>
+
+  <div>
+   <button class="big ui button" id="search-btn">search</button>
+   </div>
+   </div>
+
+  </div>
+
+  </div>
+
+<%= yield %>
+
+
+<div class = "footer">
+<div>&copy; Forked created by Jihae Kim</div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMfRndh8oVyNMwvoOk1B3sMJwiYTHs6V0&libraries=places&callback=initAutocomplete"
+async defer></script>
+</body>
 </html>
