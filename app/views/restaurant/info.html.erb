@@ -2,8 +2,12 @@
 
 <%photos = @spot.photos%>
 <div class="img-cont">
+<%unless photos[0].nil?%>
 <div><img src= "<%=photos[0].fetch_url(8000)%>"></div>
+<%end%>
+<%unless photos[1].nil?%>
 <div><img src= "<%=photos[1].fetch_url(8000)%>"></div>
+<%end%>
 </div>
 
 <div class="info-cont">
