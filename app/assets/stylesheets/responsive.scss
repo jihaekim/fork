@@ -12,3 +12,33 @@
         margin-top:2%;
     }
 } 
+
+@media only screen and (min-width : 321px) {
+    .main-search{
+        position: relative;
+        top: 30%;
+    }
+    .main-logo{
+        width:25%;
+    }
+    .search-div{
+        width: 85%;
+        height: 100px;
+    }
+    .ui.massive.input {
+        height: 100%;
+            input{
+                height:100%;
+            }
+    }
+    .ui.big.button{
+        height: 100px;
+    }
+    .outer {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .ui[class*="four column"].grid>.column{
+        width: 50%;
+    }
+} 
