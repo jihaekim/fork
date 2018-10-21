@@ -95,6 +95,12 @@ body{
         width:500px;
     }
 }
+.ui.fluid.card {
+    width: 100%;
+    max-width: 9999px;
+    min-height: 350px;
+    max-height: 350px;
+}
 .outer{
     width: 95%;
     margin: 0 auto;
